@@ -1,0 +1,37 @@
+// ATOM STYLE SHEET
+
+/** Installed Packages
+ *
+ * file-icons
+ * indent-guide-improved
+ *
+ */
+
+atom-text-editor::shadow {
+  // Bolds keywords
+  .syntax--keyword, .syntax--storage {
+    font-weight: bold;
+  }
+  // Corrects undesired bolded keywords
+  .syntax--storage.import, .syntax--storage.annotation {
+    font-weight: normal;
+  }
+}
+
+// Highlights trailing whitespace except on the cursor line
+div.line:not(.cursor-line) {
+    .trailing-whitespace {
+      background-color: red;
+      color: contrast(red);
+    }
+  }
+
+// Config for indent-guide improved
+.indent-guide-improved {
+  &.indent-guide-stack {
+    background-color: gray;
+    &.indent-guide-active {
+     background-color: #bf33c7;
+    }
+ }
+}

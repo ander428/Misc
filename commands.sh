@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# Google commands
+
 function google {
 	search="$@"
 	google-chrome https://www.google.com/search?q=${search// /+}
@@ -8,6 +10,8 @@ function google {
 function chrome {
         google-chrome $1
 }
+
+# Dir access commands
 
 function gdrive {
 	if ! [[ $(findmnt "/media/ander428/Windows") ]]; then
@@ -22,4 +26,9 @@ function github {
         fi
         cd /media/ander428/Windows/Users/joshu/Documents/Github
 }
-~
+
+# Quick update files
+
+function update-atom-style {
+	cp ~/.atom/styles.less ~/scripts/
+}
