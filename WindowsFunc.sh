@@ -1,5 +1,5 @@
 #!/bin/bash
 
 function atom {
-  powershell.exe start atom $1
+  	powershell.exe start atom $1
 }
