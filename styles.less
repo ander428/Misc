@@ -1,65 +1,61 @@
 // ATOM STYLE SHEET
-
 /** Installed Packages
  *
  * file-icons
  * indent-guide-improved
  * minimap
- *
+ * linter
+ * project-manager
+ * atom-beautify
  */
-
 atom-text-editor::shadow {
   // Bolds keywords
-  .syntax--keyword, .syntax--storage {
+  .syntax--keyword,
+  .syntax--storage {
     font-weight: bold;
   }
-
   // Selected Line
   .cursor-line {
     background-color: @background-color-highlight;
   }
-
   // Corrects undesired bolded keywords
-  .syntax--storage.import, .syntax--storage.annotation {
+  .syntax--storage.annotation,
+  .syntax--storage.import {
     font-weight: normal;
   }
-
   // Cursor
   .cursor {
     transition: opacity 0.5s;
   }
-
   // minimap
   atom-text-editor-minimap {
     min-width: 200px;
     max-width: 1000px;
     transition: opacity 100ms;
   }
-  atom-text-editor-minimap,
-  .highlights {
-    opacity: .6;
+
+  .highlights,
+  atom-text-editor-minimap {
+    opacity: 0.6;
   }
 }
-
-
 // Highlights trailing whitespace except on the cursor line
 div.line:not(.cursor-line) {
-    .trailing-whitespace {
-      background-color: red;
-      color: contrast(red);
-    }
+  .trailing-whitespace {
+    background-color: red;
+    color: contrast(red);
   }
-
+}
 // Config for indent-guide improved
 .indent-guide-improved {
   &.indent-guide-stack {
     background-color: gray;
-    &.indent-guide-active {
-     background-color: #bf33c7;
-    }
- }
-}
 
+    &.indent-guide-active {
+      background-color: #bf33c7;
+    }
+  }
+}
 // Scrollbar
 .scrollbars-visible-always {
   /deep/::-webkit-scrollbar {
@@ -71,20 +67,20 @@ div.line:not(.cursor-line) {
     background: grey;
   }
 }
-
 // Makes the cursor grey and thicker
 atom-text-editor::shadow .cursor {
   border-left: 2px solid grey;
 }
-atom-workspace {
-font-family: sans-serif;
-}
 
+atom-workspace {
+  font-family: sans-serif;
+}
 // Use system fonts
 atom-workspace {
   font-family: @font-family;
 }
-atom-panel,
-.tab-bar {
+
+.tab-bar,
+atom-panel {
   -webkit-font-smoothing: subpixel-antialiased;
 }
