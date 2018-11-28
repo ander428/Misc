@@ -32,3 +32,9 @@ function github {
 function update-atom-style {
 	cp ~/.atom/styles.less ~/scripts/
 }
+
+# Aliases
+
+function studio {
+	/opt/android-studio/bin/studio.sh
+}
