@@ -4,6 +4,7 @@
  *
  * file-icons
  * indent-guide-improved
+ * minimap
  *
  */
 
@@ -12,11 +13,34 @@ atom-text-editor::shadow {
   .syntax--keyword, .syntax--storage {
     font-weight: bold;
   }
+
+  // Selected Line
+  .cursor-line {
+    background-color: @background-color-highlight;
+  }
+
   // Corrects undesired bolded keywords
   .syntax--storage.import, .syntax--storage.annotation {
     font-weight: normal;
   }
+
+  // Cursor
+  .cursor {
+    transition: opacity 0.5s;
+  }
+
+  // minimap
+  atom-text-editor-minimap {
+    min-width: 200px;
+    max-width: 1000px;
+    transition: opacity 100ms;
+  }
+  atom-text-editor-minimap,
+  .highlights {
+    opacity: .6;
+  }
 }
+
 
 // Highlights trailing whitespace except on the cursor line
 div.line:not(.cursor-line) {
@@ -34,4 +58,33 @@ div.line:not(.cursor-line) {
      background-color: #bf33c7;
     }
  }
+}
+
+// Scrollbar
+.scrollbars-visible-always {
+  /deep/::-webkit-scrollbar {
+    width: 1.1rem;
+    height: 0.9rem;
+  }
+
+  /deep/::-webkit-scrollbar-thumb {
+    background: grey;
+  }
+}
+
+// Makes the cursor grey and thicker
+atom-text-editor::shadow .cursor {
+  border-left: 2px solid grey;
+}
+atom-workspace {
+font-family: sans-serif;
+}
+
+// Use system fonts
+atom-workspace {
+  font-family: @font-family;
+}
+atom-panel,
+.tab-bar {
+  -webkit-font-smoothing: subpixel-antialiased;
 }
