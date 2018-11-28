@@ -46,7 +46,25 @@ function .... {
 # Quick update files
 
 function update-atom-style {
-	cp ~/.atom/styles.less ~/scripts/
+	dir=`pwd`
+	if [ "$1" = "-l" ]; then
+                cp ~/scripts/styles.less ~/.atom/styles.less
+        elif [ "$#" -eq "1" ]; then
+               	cp ~/.atom/styles.less ~/scripts/styles.less
+		cd ~/scripts
+        	if [[ `git status --porcelain` ]]; then
+                	git add styles.less
+                	git commit -m "$1"
+                	git push
+                	echo "Changes Uploaded!"
+        	fi
+        	cd $dir
+	else
+		echo "You entered ${#} arguments when 1 is required!"
+        fi
+	 
+	
+	
 }
 
 # Aliases
