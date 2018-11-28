@@ -7,9 +7,13 @@ function google {
 	google-chrome https://www.google.com/search?q=${search// /+}
 }
 
+export -f google
+
 function chrome {
-        google-chrome $1
+  google-chrome $1
 }
+
+export -f chrome
 
 # Dir access commands
 
@@ -20,28 +24,48 @@ function gdrive {
 	cd /media/Windows/Users/joshu/Google\ Drive/Classes
 }
 
+export -f gdrive
+
 function github {
-        if ! [[ $(findmnt "/media/Windows") ]]; then
-                sudo mount /dev/nvme0n1p3/ /media/ander428/Windows
-        fi
-        cd /media/Windows/Users/joshu/Documents/Github
+	if ! [[ $(findmnt "/media/Windows") ]]; then
+		sudo mount -t ntfs-3g -o uid=1000,gid=1000,dmask=002,fmask=111 /dev/nvme0n1p3 /media/Windows
+	fi
+	cd /media/Windows/Users/joshu/Documents/Github
 }
 
-function . {
+export -f github
+
+function .. {
 	cd ..
 }
 
-function .. {
-	cd ../..
-}
+export -f ..
 
 function ... {
 	cd ../..
 }
 
+export -f ...
+
 function .... {
+	cd ../..
+}
+
+export -f ....
+
+function ..... {
 	cd ../../../..
 }
+
+export -f .....
+
+# Aliases
+
+function studio {
+	/opt/android-studio/bin/studio.sh
+}
+
+export -f studio
 
 # Quick update files
 
@@ -59,16 +83,7 @@ function update-atom-style {
                 	echo "Changes Uploaded!"
         	fi
         	cd $dir
-	else
-		echo "You entered ${#} arguments when 1 is required!"
-        fi
-	 
-	
-	
+  fi
 }
 
-# Aliases
-
-function studio {
-	/opt/android-studio/bin/studio.sh
-}
+export -f update-atom-style
