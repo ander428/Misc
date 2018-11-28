@@ -14,17 +14,33 @@ function chrome {
 # Dir access commands
 
 function gdrive {
-	if ! [[ $(findmnt "/media/ander428/Windows") ]]; then
+	if ! [[ $(findmnt "/media/Windows") ]]; then
 		sudo mount -t ntfs-3g -o uid=1000,gid=1000,dmask=002,fmask=111 /dev/nvme0n1p3 /media/Windows
 	fi
 	cd /media/Windows/Users/joshu/Google\ Drive/Classes
 }
 
 function github {
-        if ! [[ $(findmnt "/media/ander428/Windows") ]]; then
+        if ! [[ $(findmnt "/media/Windows") ]]; then
                 sudo mount /dev/nvme0n1p3/ /media/ander428/Windows
         fi
-        cd /media/ander428/Windows/Users/joshu/Documents/Github
+        cd /media/Windows/Users/joshu/Documents/Github
+}
+
+function . {
+	cd ..
+}
+
+function .. {
+	cd ../..
+}
+
+function ... {
+	cd ../..
+}
+
+function .... {
+	cd ../../../..
 }
 
 # Quick update files
