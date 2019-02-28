@@ -18,8 +18,14 @@ export -f chrome
 # Dir access commands
 
 function gdrive {
+	if [ "$1" == "-remount" ]; then
+			cd ~
+			sudo umount /media/Windows
+			echo "unmounted"
+	fi
 	if ! [[ $(findmnt "/media/Windows") ]]; then
-		sudo mount -t ntfs-3g -o uid=1000,gid=1000,dmask=002,fmask=111 /dev/nvme0n1p3 /media/Windows
+		sudo mount -t ntfs-3g -o rw,auto,user,uid=1000,gid=1000,dmask=002,fmask=111 /dev/nvme0n1p3 /media/Windows
+		echo "mounted"
 	fi
 	cd /media/Windows/Users/joshu/Google\ Drive/Classes
 }
@@ -27,8 +33,14 @@ function gdrive {
 export -f gdrive
 
 function github {
+	if [ "$1" == "-remount" ]; then
+			cd ~
+			sudo umount /media/Windows
+			echo "unmounted"
+	fi
 	if ! [[ $(findmnt "/media/Windows") ]]; then
-		sudo mount -t ntfs-3g -o uid=1000,gid=1000,dmask=002,fmask=111 /dev/nvme0n1p3 /media/Windows
+		sudo mount -t ntfs-3g -o rw,auto,user,uid=1000,gid=1000,dmask=002,fmask=111 /dev/nvme0n1p3 /media/Windows
+		echo "mounted"
 	fi
 	cd /media/Windows/Users/joshu/Documents/Github
 }
@@ -63,6 +75,10 @@ export -f .....
 
 function studio {
 	/opt/android-studio/bin/studio.sh
+}
+
+function vscode {
+	code
 }
 
 export -f studio
