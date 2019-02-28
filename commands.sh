@@ -24,7 +24,7 @@ function gdrive {
 			echo "unmounted"
 	fi
 	if ! [[ $(findmnt "/media/Windows") ]]; then
-		sudo mount -t ntfs-3g -o rw,auto,user,uid=1000,gid=1000,dmask=002,fmask=111 /dev/nvme0n1p3 /media/Windows
+		sudo mount -t ntfs-3g /dev/nvme0n1p3 /media/Windows -o fmask=0000,dmask=0000,umask=0000
 		echo "mounted"
 	fi
 	cd /media/Windows/Users/joshu/Google\ Drive/Classes
@@ -39,7 +39,7 @@ function github {
 			echo "unmounted"
 	fi
 	if ! [[ $(findmnt "/media/Windows") ]]; then
-		sudo mount -t ntfs-3g -o rw,auto,user,uid=1000,gid=1000,dmask=002,fmask=111 /dev/nvme0n1p3 /media/Windows
+		sudo mount -t ntfs-3g /dev/nvme0n1p3 /media/Windows -o fmask=0000,dmask=0000,umask=0000
 		echo "mounted"
 	fi
 	cd /media/Windows/Users/joshu/Documents/Github
