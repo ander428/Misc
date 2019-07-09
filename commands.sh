@@ -73,15 +73,45 @@ export -f .....
 
 # Aliases
 
+function run {
+	sudo /etc/init.d/$1 $2
+}
+
+export -f run
+
 function studio {
 	/opt/android-studio/bin/studio.sh
 }
+
+export -f studio
 
 function vscode {
 	code
 }
 
-export -f studio
+export -f vscode
+
+function intellij {
+	/opt/idea-IC-191.6183.87/bin/idea.sh
+}
+
+export -f intellij
+
+function webstorm {
+	/opt/WebStorm-191.6183.63/bin/webstorm.sh
+}
+
+export -f webstorm
+
+function android {
+	if [ "$1" == "-nexus" ]; then
+		sudo ~/Android/Sdk/tools/emulator -avd Nexus_5X_API_27
+	elif [ "$1" == "-pixel" ]; then
+		sudo  ~/Android/Sdk/tools/emulator -avd Pixel_XL_API_29
+	fi
+}
+
+export -f android
 
 # Quick update files
 
