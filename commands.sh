@@ -98,7 +98,7 @@ function intellij {
 export -f intellij
 
 function webstorm {
-	/opt/WebStorm-191.6183.63/bin/webstorm.sh
+	sudo /opt/WebStorm-191.6183.63/bin/webstorm.sh
 }
 
 export -f webstorm
@@ -107,7 +107,7 @@ function android {
 	if [ "$1" == "-nexus" ]; then
 		sudo ~/Android/Sdk/tools/emulator -avd Nexus_5X_API_27
 	elif [ "$1" == "-pixel" ]; then
-		sudo  ~/Android/Sdk/tools/emulator -avd Pixel_XL_API_29
+		sudo  ~/Android/Sdk/emulator/emulator -avd Pixel_XL_API_29
 	fi
 }
 
