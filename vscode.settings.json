@@ -1,3 +1,14 @@
+/* Plug Ins
+    Atom Keymap
+    Atom One Dark Theme
+    Auto Import
+    GitLens
+    glean
+    Prettier
+    React-Native/React/Redux snippets for es6/es7
+    Terminal
+*/
+
 {
     "editor.multiCursorModifier": "ctrlCmd",
     "editor.formatOnPaste": true,
