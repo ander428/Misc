@@ -14,174 +14,186 @@
 */
 
 {
-  "editor.multiCursorModifier": "ctrlCmd",
-  "editor.formatOnPaste": true,
-  "workbench.colorCustomizations": {
-    "editor.selectionBackground": "#135564",
-    "editor.selectionHighlightBackground": "#135564"
-  },
-  "editor.tokenColorCustomizations": {
-    "[Atom One Dark]": {
-      "textMateRules": [
-        {
-          "scope": [
-            "keyword",
-            "storage",
-            "constant.language",
-            "support.class.builtin",
-            "keyword.control"
-          ],
-          "settings": {
-            "fontStyle": "bold",
-            "foreground": "#e06c75ff"
-          }
-        },
-        {
-          "scope": ["storage.type", "storage.type.primitive"],
-          "settings": {
-            "foreground": "#ad6bc2"
-          }
-        },
-        {
-          "scope": "entity.name.function",
-          "settings": {
-            "foreground": "#6897bb"
-          }
-        },
-        {
-          "scope": "entity.name.type.class",
-          "settings": {
-            "foreground": "#abb2bfff",
-            "fontStyle": "italic"
-          }
-        },
-        {
-          "scope": "string",
-          "settings": {
-            "fontStyle": "italic"
-          }
-        },
-        {
-          "scope": ["meta.objectliteral"],
-          "settings": {
-            "foreground": "#9676aa"
-          }
-        },
-        {
-          "scope": [
-            "comment.block",
-            "comment.block punctuation.definition.comment"
-          ],
-          "settings": {
-            "foreground": "#00a51b"
-          }
-        },
-        {
-          "scope": [
-            "constant.character.escape",
-            "variable.other.readwrite",
-            "variable.language",
-            "punctuation.terminator"
-          ],
-          "settings": {
-            "foreground": "#d19a66ff",
-            "fontStyle": "bold"
-          }
-        },
-        {
-          "scope": "entity.name.tag",
-          "settings": {
-            "fontStyle": "bold"
-          }
-        },
-        {
-          "scope": "storage.modifier.import",
-          "settings": {
-            "fontStyle": ""
-          }
-        },
-        {
-          "scope": "variable",
-          "settings": {
-            "foreground": "#9876aa",
-            "fontStyle": "italic"
-          }
-        },
-
-        /* Language Specific */
-
-        // JavaScript
-        {
-          "scope": "variable.other.readwrite.alias.js",
-          "settings": {
-            "foreground": "#ABB2BF"
-          }
-        },
-        {
-          "scope": "meta.template.expression.js punctuation.definition",
-          "settings": {
-            "foreground": "#ABB2BF",
-            "fontStyle": "bold"
-          }
-        },
-        {
-          "scope": "keyword.control.default.js",
-          "settings": {
-            "foreground": "#C678DD",
-            "fontStyle": "bold"
-          }
-        },
-        {
-          "scope": "meta.export.default.js variable.other.readwrite.js",
-          "settings": {
-            "foreground": "#d19a66ff",
-            "fontStyle": ""
-          }
-        },
-
-        // JSON
-        {
-          "scope": [
-            "support.type.property-name.json",
-            "support.type.property-name.json punctuation"
-          ],
-          "settings": {
-            "foreground": "#9676aa",
-            "fontStyle": ""
-          }
-        },
-        {
-          "scope": "constant.language.json",
-          "settings": {
-            "foreground": "#d19a66ff",
-            "fontStyle": "bold"
-          }
-        },
-
-        // Java
-        {
-          "scope": "source.java storage.type",
-          "settings": {
-            "fontStyle": "bold",
-            "foreground": "#ad6bc2"
-          }
-        },
-        {
-          "scope": "meta.definition.variable.java variable.other.definition.java",
-          "settings": {
-            "fontStyle": "",
-            "foreground": "#abb2bfff"
-          }
-        },
-        {
-          "scope": "storage.modifier.import.java",
-          "settings": {
-            "fontStyle": ""
-          }
+    "editor.multiCursorModifier": "ctrlCmd",
+    "editor.formatOnPaste": true,
+    "workbench.colorCustomizations": {
+        "editor.selectionBackground": "#135564",
+        "editor.selectionHighlightBackground": "#135564",
+    },
+    "editor.tokenColorCustomizations": {
+        "[Atom One Dark]": {
+            "textMateRules": [
+                {
+                    "scope": [
+                        "keyword",
+                        "storage",
+                        "constant.language",
+                        "support.class.builtin",
+                        "keyword.control"
+                    ],
+                    "settings": {
+                        "fontStyle": "bold",
+                        "foreground": "#e06c75ff",
+                    }
+                },
+                {
+                    "scope": [
+                        "storage.type",
+                        "storage.type.primitive"
+                    ],
+                    "settings": {
+                        "foreground": "#ad6bc2"
+                    }
+                },
+                {
+                    "scope": "entity.name.function",
+                    "settings": {
+                        "foreground": "#6897bb",
+                    }
+                },
+                {
+                    "scope": "entity.name.type.class",
+                    "settings": {
+                        "foreground": "#abb2bfff",
+                        "fontStyle": "italic"
+                    }
+                },
+                {
+                    "scope": "string",
+                    "settings": {
+                        "fontStyle": "italic"
+                    }
+                },
+                {
+                    "scope": [
+                        "meta.objectliteral"
+                    ],
+                    "settings": {
+                        "foreground": "#9676aa",
+                    }
+                },
+                {
+                    "scope": [
+                        "comment.block",
+                        "punctuation.definition.comment"
+                    ],
+                    "settings": {
+                        "foreground": "#00a51b"
+                    }
+                },
+                {
+                    "scope": [
+                        "constant.character.escape",
+                        "variable.other.readwrite",
+                        "variable.language",
+                        "punctuation.terminator"
+                    ],
+                    "settings": {
+                        "foreground": "#d19a66ff",
+                        "fontStyle": "bold"
+                    }
+                },
+                {
+                    "scope": "entity.name.tag",
+                    "settings": {
+                        "fontStyle": "bold"
+                    }
+                },
+                {
+                    "scope": "storage.modifier.import",
+                    "settings": {
+                        "fontStyle": ""
+                    }
+                },
+                {
+                    "scope": "variable",
+                    "settings": {
+                        "foreground": "#9876aa",
+                        "fontStyle": "italic"
+                    }
+                },
+                /* Language Specific */
+                // JavaScript
+                {
+                    "scope": "variable.other.readwrite.alias.js",
+                    "settings": {
+                        "foreground": "#ABB2BF",
+                    }
+                },
+                {
+                    "scope": "meta.template.expression.js punctuation.definition",
+                    "settings": {
+                        "foreground": "#ABB2BF",
+                        "fontStyle": "bold"
+                    }
+                },
+                {
+                    "scope": [
+                        "keyword.control.default.js",
+                        "storage.type.primitive.array.java"
+                    ],
+                    "settings": {
+                        "foreground": "#C678DD",
+                        "fontStyle": "bold"
+                    }
+                },
+                {
+                    "scope": "meta.export.default.js variable.other.readwrite.js",
+                    "settings": {
+                        "foreground": "#d19a66ff",
+                        "fontStyle": ""
+                    }
+                },
+                // JSON
+                {
+                    "scope": [
+                        "support.type.property-name.json",
+                        "support.type.property-name.json punctuation"
+                    ],
+                    "settings": {
+                        "foreground": "#9676aa",
+                        "fontStyle": ""
+                    }
+                },
+                {
+                    "scope": "constant.language.json",
+                    "settings": {
+                        "foreground": "#d19a66ff",
+                        "fontStyle": "bold"
+                    }
+                },
+                // Java
+                {
+                    "scope": "source.java storage.type",
+                    "settings": {
+                        "fontStyle": "bold",
+                        "foreground": "#ad6bc2"
+                    }
+                },
+                {
+                    "scope": "meta.definition.variable.java variable.other.definition.java",
+                    "settings": {
+                        "fontStyle": "",
+                        "foreground": "#abb2bfff"
+                    }
+                },
+                {
+                    "scope": "storage.modifier.import.java",
+                    "settings": {
+                        "fontStyle": ""
+                    }
+                },
+            ]
         }
-      ]
+    },
+    "workbench.colorTheme": "Atom One Dark",
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "window.zoomLevel": -1,
+    "java.errors.incompleteClasspath.severity": "ignore",
+    "python.jediEnabled": false,
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "[less]": {
+        "editor.suggest.insertMode": "replace"
     }
-  },
-  "workbench.colorTheme": "Atom One Dark",
-  "editor.formatOnSave": true
 }
