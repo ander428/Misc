@@ -13,14 +13,22 @@
     indent-rainbow
     visual studio intellicode
 */
-
 {
+    // General editor settings
     "editor.multiCursorModifier": "ctrlCmd",
     "editor.formatOnPaste": true,
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "window.zoomLevel": -1,
+    "javascript.updateImportsOnFileMove.enabled": "always",
+
+    // Color customizations
     "workbench.colorCustomizations": {
         "editor.selectionBackground": "#135564",
-        "editor.selectionHighlightBackground": "#135564",
+        "editor.selectionHighlightBackground": "#135564"
     },
+    
+    // Token color customizations
     "editor.tokenColorCustomizations": {
         "[Atom One Dark]": {
             "textMateRules": [
@@ -34,7 +42,7 @@
                     ],
                     "settings": {
                         "fontStyle": "bold",
-                        "foreground": "#e06c75ff",
+                        "foreground": "#e06c75"
                     }
                 },
                 {
@@ -49,13 +57,13 @@
                 {
                     "scope": "entity.name.function",
                     "settings": {
-                        "foreground": "#6897bb",
+                        "foreground": "#6897bb"
                     }
                 },
                 {
                     "scope": "entity.name.type.class",
                     "settings": {
-                        "foreground": "#abb2bfff",
+                        "foreground": "#abb2bf",
                         "fontStyle": "italic"
                     }
                 },
@@ -66,11 +74,9 @@
                     }
                 },
                 {
-                    "scope": [
-                        "meta.objectliteral"
-                    ],
+                    "scope": "meta.objectliteral",
                     "settings": {
-                        "foreground": "#9676aa",
+                        "foreground": "#9676aa"
                     }
                 },
                 {
@@ -90,7 +96,7 @@
                         "punctuation.terminator"
                     ],
                     "settings": {
-                        "foreground": "#d19a66ff",
+                        "foreground": "#d19a66",
                         "fontStyle": "bold"
                     }
                 },
@@ -113,12 +119,12 @@
                         "fontStyle": "italic"
                     }
                 },
-                /* Language Specific */
+                // Language Specific
                 // JavaScript
                 {
                     "scope": "variable.other.readwrite.alias.js",
                     "settings": {
-                        "foreground": "#ABB2BF",
+                        "foreground": "#ABB2BF"
                     }
                 },
                 {
@@ -141,8 +147,7 @@
                 {
                     "scope": "meta.export.default.js variable.other.readwrite.js",
                     "settings": {
-                        "foreground": "#d19a66ff",
-                        "fontStyle": ""
+                        "foreground": "#d19a66"
                     }
                 },
                 // JSON
@@ -152,14 +157,13 @@
                         "support.type.property-name.json punctuation"
                     ],
                     "settings": {
-                        "foreground": "#9676aa",
-                        "fontStyle": ""
+                        "foreground": "#9676aa"
                     }
                 },
                 {
                     "scope": "constant.language.json",
                     "settings": {
-                        "foreground": "#d19a66ff",
+                        "foreground": "#d19a66",
                         "fontStyle": "bold"
                     }
                 },
@@ -174,8 +178,7 @@
                 {
                     "scope": "meta.definition.variable.java variable.other.definition.java",
                     "settings": {
-                        "fontStyle": "",
-                        "foreground": "#abb2bfff"
+                        "foreground": "#abb2bf"
                     }
                 },
                 {
@@ -183,18 +186,28 @@
                     "settings": {
                         "fontStyle": ""
                     }
-                },
+                }
             ]
         }
     },
+
+    // Theme settings
     "workbench.colorTheme": "Atom One Dark",
-    "editor.suggestSelection": "first",
-    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-    "window.zoomLevel": -1,
-    "java.errors.incompleteClasspath.severity": "ignore",
-    "python.jediEnabled": false,
-    "javascript.updateImportsOnFileMove.enabled": "always",
+
+    // File settings
+    "files.autoSave": "afterDelay",
+    "files.insertFinalNewline": true,
+    "files.trimTrailingWhitespace": true,
+
+    // Terminal settings
+    "terminal.integrated.fontSize": 14,
+
+    // Language-specific settings
     "[less]": {
         "editor.suggest.insertMode": "replace"
-    }
+    },
+    
+    // Additional configurations
+    "java.errors.incompleteClasspath.severity": "ignore",
+    "python.jediEnabled": false
 }
